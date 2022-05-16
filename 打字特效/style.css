@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*  */
+    /* box-sizing: border-box; */
+    box-sizing: content-box;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1eff00;
+}
+
+/*
+    ch是一个新的单位，表示 "0" 的宽度
+*/
+.text span {
+    font-size: 54px;
+    font-weight: 700;
+    width: 24ch;
+    white-space: nowrap;
+    overflow: hidden;
+    /* Monaco, monospace, Consolas */
+    font-family: 'Consolas';
+    /*
+        steps 函数，指定了一个阶跃函数
+        steps() 第一个参数 number 为指定间隔数，即把动画分为 n 步阶段性展示
+    */
+    animation: typing 6s steps(24),
+               caret 1s steps(1) infinite;
+    border-right: 2px solid;
+    /* 用户无法选择：用来消除真实的鼠标光标 */
+    user-select: none;
+}
+
+@keyframes typing {
+    from {
+        width: 0px;
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
