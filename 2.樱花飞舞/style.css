@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(./image/bg1.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
