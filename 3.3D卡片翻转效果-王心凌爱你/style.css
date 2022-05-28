@@ -1,0 +1,144 @@
+/* 引入谷歌字体 */
+@font-face {
+    /* 定义个名字，因为我最近比较喜欢mamamoo的wind flower，故以此命名 */
+    font-family: 'windflower';
+    src: url(./font/IndieFlower.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /* body内的内容水平垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景色 */
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #fff;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    /* 加上过渡效果 */
+    transition: all 1s ease-in-out;
+}
+
+.img-box {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* 设置变形的原点为图片盒子的左侧 */
+    transform-origin: left;
+    /* 指示元素的子元素应位于 3d 空间中 */
+    transform-style: preserve-3d;
+    /* 加上过渡效果 */
+    transition: all 1s ease-in-out;
+}
+
+.img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 在保持其宽高比的同时填充于元素的整个内容框 */
+    object-fit: cover;
+    transform-style: preserve-3d;
+    /* 背面朝用户时不可见 */
+    backface-visibility: hidden;
+}
+
+/* 第二张图片旋转180度，这样使其看不见 */
+.img-box img:nth-child(2) {
+    transform: rotateY(180deg);
+}
+
+/* 鼠标移动到容器上后，container向右移动自己宽度的50% */
+.container:hover {
+    transform: translateX(50%);
+}
+
+/* 
+    鼠标移动到container上后， img-box绕Y轴方向旋转180度，
+    此时背后的图片显示，正面的图片隐藏
+*/
+.container:hover .img-box {
+    transform: rotateY(180deg);
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    padding-top: 0px;
+    /* 降低层级，使其出现在图片div的下方 */
+    z-index: -1;
+}
+
+.right .video-container {
+    width: 100%;
+    height: 240px;
+    background: green;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.right  .video-container video {
+    width: 100%;
+    height: 100%;
+    /* 在保持其宽高比的同时填充于元素的整个内容框 */
+    object-fit: cover;
+}
+
+.right .text {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffb0b0;
+    /* 用户无法选中字体 */
+    user-select: none;
+}
+
+/* 第一个span的样式 */
+.right .text span:first-child {
+    font-size: 20px;
+    font-family: 700;
+    letter-spacing: 6px;
+}
+
+/* 第二个span的样式 */
+.right .text span:last-child {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.water-mark {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%)  rotate(-20deg);
+    font-size: 120px;
+    font-weight: 700;
+    font-family: 'windflower';
+    color: #fff;
+    letter-spacing: 80px;
+    /* 不换行 */
+    white-space: nowrap;
+}

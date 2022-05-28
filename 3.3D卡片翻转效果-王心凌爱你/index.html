@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>3D卡片翻转效果-王心凌爱你</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧内容： 放置两张图片，用来作为正反面背景图 -->
+        <section class="img-box">
+            <img src="./image/wxl-3.jpg" alt="">
+            <img src="./image/wxl-1.jpg" alt="">
+        </section>
+
+        <!-- 右侧内容 -->
+        <section class="right">
+            <!-- 视频 -->
+            <div class="video-container">
+                <!--
+                    loop: 循环播放
+                    muted: 静音
+                    autoplay: 自动播放
+                -->
+                <video src="./video/wxl.mp4" loop muted autoplay></video>
+            </div>
+            
+
+            <div class="text">
+                <span>《爱你》</span>
+                <span>王心凌</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- 背景水印 -->
+    <span class="water-mark">Cyndi Wang</span>
+</body>
+</html>
