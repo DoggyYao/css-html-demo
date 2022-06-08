@@ -1,0 +1,153 @@
+:root {
+    /* 定义好变量，后面会用到 */
+    --content-top: 50px;
+}
+
+/* 样式初始化 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url(./image/bg.jpg);
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+}
+
+.container .page {
+    width: 390px;
+    height: 520px;
+    overflow: hidden;
+    background: #fff;
+    /* 水平居中 */
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    /* 通过渐变色的效果来设置折纸两侧的颜色 */
+    background: linear-gradient(-150deg, transparent 45px, #fff 0);
+    transition: all .2s ease-in-out;
+}
+
+.container .page:hover {
+    transform: scale(1.1);
+}
+
+/* 折角 */
+.container .page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+                            to left bottom,
+                            transparent 50%,
+                            rgb(198, 193, 193) 0) no-repeat;
+    /* 这里根据yao老师亲手话的 《图解1.png》进行计算得出 */
+    width: 52px;
+    height: 90px;
+    /* 以右下角为原点 */
+    transform-origin: bottom right;
+    /*
+        先把角度30度调好，然后图省事的话就直接在页面上调偏移量
+        这里注意 rotate 和 translateY 的先后顺序，顺序不一样结果是不一样的
+    */
+    transform: translateY(-39px) rotate(-30deg);
+}
+
+.page .lines {
+    margin-top: var(--content-top);
+    padding-left: 60px;
+    height: calc(520px - var(--content-top));
+    /*
+        画线
+    */
+    background-image: repeating-linear-gradient(
+        white 0,
+        white 23.5px,
+        steelblue 25px
+    );
+}
+
+.page .text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.page .text span {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: KaiTi;
+    letter-spacing: 12px;
+    margin: 0 16px;
+    color: rgb(8, 8, 215);
+    /* 文字垂直排列 */
+    writing-mode: vertical-lr;
+}
+
+.page .text span:last-child {
+    font-size: 22px;
+    /* 下端对齐 */
+    align-self: flex-end;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 30px;
+    left: 16px;
+}
+
+/* 设置红色竖线 */
+.page::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: rgb(240, 152, 152);
+    margin-left: 48px;
+    width: 2px;
+}
+
+.page .holes {
+    position: absolute;
+    height: 100%;
+    width: 48px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    top: 0;
+    left: 0;
+}
+
+.page .holes .hole {
+    position: absolute;
+    left: 12.5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: gainsboro;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 第一个洞 */
+.page .holes .hole:nth-child(1) {
+    top: 50px;
+}
+
+/* 第二个洞 */
+.page .holes .hole:nth-child(2) {
+    top: 260px;
+}
+
+/* 第三个洞 */
+.page .holes .hole:nth-child(3) {
+    top: 470px;
+}
