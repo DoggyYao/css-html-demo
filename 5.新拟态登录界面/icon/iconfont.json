@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "400807",
+      "name": "github3",
+      "font_class": "github3",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "634581",
+      "name": "推特_twitter44",
+      "font_class": "tuitetwitter44",
+      "unicode": "e708",
+      "unicode_decimal": 59144
+    },
+    {
+      "icon_id": "834839",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    }
+  ]
+}

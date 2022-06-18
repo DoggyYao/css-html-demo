@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <title>新拟态登录界面</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 点击会切换的那个面板 -->
+        <div class="switch-panel">
+            <!-- 登录 -->
+            <div id="login" class="switch-box switch-hidden">
+                <div class="title">Welcome Back !</div>
+                <p>To keep connected with us please login with your personal info</p>
+                <button id="switch1">SIGN IN</button>
+            </div>
+
+            <!-- 注册 -->
+            <div id="register" class="switch-box">
+                <div class="title">Hello Friend !</div>
+                <p>Enter your person details and start journey with us</p>
+                <button id="switch2">SIGN IN</button>
+            </div>
+        </div>
+
+        <section class="register-login-panel">
+            <!-- 注册界面 -->
+            <section class="register switch-hidden-2">
+                <div class="content">
+                    <h2>Create Account</h2>
+                    <div class="icons">
+                        <i class="iconfont icon-github3"></i>
+                        <i class="iconfont icon-tuitetwitter44"></i>
+                        <i class="iconfont icon-weibo"></i>
+                    </div>
+                    <span>or use eamil for registeration</span>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Password">
+                    <button>SIGN UP</button>
+                </div>
+            </section>
+
+            <!-- 登录界面 -->
+            <section class="login">
+                <div class="content">
+                    <h2>Sign in to Website</h2>
+                    <div class="icons">
+                        <i class="iconfont icon-github3"></i>
+                        <i class="iconfont icon-tuitetwitter44"></i>
+                        <i class="iconfont icon-weibo"></i>
+                    </div>
+                    <span>or use eamil for registeration</span>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Password">
+                    <span>Forgot your password?</span>
+                    <button>SIGN IN</button>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+</html>
