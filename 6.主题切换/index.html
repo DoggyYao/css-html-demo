@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--【持久样式】没有 rel="alternate" title="..." 的样式：总是应用于文档  -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 
+        【首选样式】没有 rel="alternate" 有 title="..." ： 只有第一个待 tilte 的<link> 会生效
+     -->
+    <link rel="stylesheet" href="./css/theme-white.css" data-theme="white" title="白色属性">
+    <!-- 
+        【备用样式】有 alternate ，也有 title：默认禁用, 可以选择
+        注意：必须加上 disabled 才能生效
+     -->
+    <link rel="alternate stylesheet" href="./css/theme-dark.css" data-theme="dark" disabled title="黑色属性">
+    <link rel="alternate stylesheet" href="./css/theme-red.css" data-theme="red" disabled title="红色属性">
+    <link rel="alternate stylesheet" href="./css/theme-blue.css" data-theme="blue" disabled title="蓝色属性">
+    <title>主题切换</title>
+</head>
+<body>
+    <div class="container">
+        <section class="title">Theme Switch</section>
+        <section class="switch-btns">
+            <div class="btn white" data-theme="white"></div>
+            <div class="btn dark" data-theme="dark"></div>
+            <div class="btn red" data-theme="red"></div>
+            <div class="btn blue" data-theme="blue"></div>
+        </section>
+    </div>
+</body>
+
+<script src="./script.js"></script>
+</html>

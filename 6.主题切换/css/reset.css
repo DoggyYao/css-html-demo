@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s ease-in-out;
+}
+
+.container .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    user-select: none;
+    transition: color .5s ease-in-out;
+}
+
+.container .switch-btns {
+    display: flex;
+    margin-top: 32px;
+}
+
+.container .switch-btns .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .switch-btns .white {
+    background-color: #fff;
+}
+
+.container .switch-btns .dark {
+    background-color: #1d0624;
+}
+
+.container .switch-btns .red {
+    background-color: red;
+}
+
+.container .switch-btns .blue {
+    background-color: #3f00ff;
+}
