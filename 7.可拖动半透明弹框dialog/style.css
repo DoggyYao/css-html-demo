@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(./image/longmao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-btn {
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: #787fb3;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog .box {
+    width: 350px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+dialog .box .header-bar {
+    height: 20px;
+    background-color: #787fb3;
+    cursor: move;
+    user-select: none;
+}
+
+dialog .box .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.box .content p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #787fb3;
+    user-select: none;
+}
