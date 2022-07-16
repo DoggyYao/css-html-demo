@@ -8,7 +8,7 @@ canvas.width = width = window.innerWidth;
 canvas.height = height = window.innerHeight;
 
 // 常量、参数
-const TOTAL = 500, // 雪花数量
+const TOTAL = 600, // 雪花数量
         tsc = 1, // 用来设置雪花飘落效果的参数
         speed = 1; // 雪花飘落速度
 const sc = 1.3, // 用来生成雪花半径的参数
@@ -81,7 +81,7 @@ class SnowFlake {
         snowCtx.fillStyle = this.g;
         snowCtx.beginPath(); // 开始
         // arc() 画圆（雪花）
-        snowCtx.arc(this.x, this.y, this.size, 0, Math.PI, true);
+        snowCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2, true);
         snowCtx.fill(); // 着色
 
         // y轴方向超出画布高度，重新设置雪花在y轴的坐标
