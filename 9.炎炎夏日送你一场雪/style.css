@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url(./image/1.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

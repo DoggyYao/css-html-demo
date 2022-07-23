@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 30px 0 30px 20px;
+    display: flex;
+    position: relative;
+}
+
+.container .card {
+    width: 300px;
+    height: 350px;
+    box-shadow: -20px 0 30px #000;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(85deg, #434343, #262626);
+    transition: all .3s ease-in-out;
+}
+
+.container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 除第一张card，其他card向左移动130px，呈现一个折叠效果 */
+.container .card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.container .card:hover {
+    transform: translateY(-1rem) rotate(3deg);
+}
+
+.container .card:first-child:hover {
+    transform: translate(-0.5rem, -1rem) rotate(3deg);
+}
+
+/* ~: 同级向下查找，即当前.card后面的兄弟card */
+.container .card:hover~.card {
+    transform: translateX(130px);
+}
