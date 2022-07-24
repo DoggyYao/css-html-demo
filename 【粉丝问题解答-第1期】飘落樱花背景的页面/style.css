@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+body {
+    background-image: url(./image/sakura2.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+/* 位于樱花飘落背景上方的覆盖层 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow-y: auto;
+    padding: 25px 0;
+    /* 设置背景为透明，当然只要不设置颜色也可以 */
+    background: transparent;
+}
+
+/* 去除滚动条 */
+.overlay::-webkit-scrollbar {
+    width: 0;
+}
+
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 55px 50px;
+    /* 拟物玻璃化效果 */
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 10px;
+    border: 1px solid rgba(209, 213, 219, 0.4);
+    color: #000;
+}
+
+h2, h4 {
+    text-align: center;
+    margin: 12px 0;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+.article p {
+    text-indent: 2em;
+    line-height: 2;
+    margin-bottom: 1em;
+}
