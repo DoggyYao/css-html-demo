@@ -1,0 +1,44 @@
+/* 样式初始化 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    /* flex布局，水平垂直方向居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    /* 字间距 */
+    letter-spacing: 3px;
+    /*
+        动画
+        animate: 自定义动画名
+        1.5s: 动画持续时长
+        infinite: 动画无限循环
+        alternate: 动画在奇数次数正向播放，在偶数次反向播放
+        ease-in-out: 动画以低速开始额结束
+    */
+    animation: animate 1.5s infinite alternate ease-in-out;
+    /* 字体用户无法选中 */
+    user-select: none;
+}
+
+@keyframes animate {
+    to
+    {
+        opacity: 0.08;
+        /* 滤镜：模糊效果 */
+        filter: blur(5px);
+        letter-spacing: 8px;
+    }
+}
