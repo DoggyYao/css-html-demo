@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <title>Music Player</title>
+</head>
+<body>
+
+    <div class="player">
+        <!-- 音乐插图 -->
+        <section class="img">
+            <img id="bg-img" src="" alt="">
+        </section>
+
+        <!-- 信息 -->
+        <section class="info">
+            <!-- 进度栏 -->
+            <div class="progress">
+                <div id="start">0:00</div>
+                <div id="bar"></div>
+                <div id="end">3:15</div>
+            </div>
+            <!-- 歌曲信息 -->
+            <div class="song-detail">
+                <span id="title"></span>
+                <span id="author"></span>
+            </div>
+            <!-- 按钮区域 -->
+            <div id="controls" class="controls">
+                <span><i id="list" class="iconfont icon-danlieliebiao"></i></span>
+                <div class="play">
+                    <span><i id="voice" class="iconfont icon-shengyin_shiti"></i></span>
+                    <span><i id="pre" class="iconfont icon-shangyishou"></i></span>
+                    <span><i id="play" class="iconfont icon-24gf-play"></i></span>
+                    <span><i id="next" class="iconfont icon-xiayishou2"></i></span>
+                    <span><i id="mode" class="iconfont icon-suiji"></i></span>
+                </div>
+                <span><i id="" class="iconfont icon-tianjia"></i></span>
+            </div>
+        </section>
+
+        <!-- audio标签 -->
+        <section class="audio">
+            <audio id="audio" controls src="">
+            </audio>
+        </section>
+    </div>
+
+
+</body>
+
+<script src="./script.js"></script>
+</html>

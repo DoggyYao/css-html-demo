@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'JosefinSans Light';
+    src: url(./font/JosefinSans-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'JosefinSans Light';
+    background: url('./image/bg1.jpg');
+    background-size: cover;
+}
+
+.player {
+    width: 380px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgb(54 79 60 / 40%);
+    transition: all 0.5s ease-in-out;
+}
+
+.player .img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.player .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    transition: .5s all ease-in-out;
+}
+
+.player .info {
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(35px);
+    transition: .5s all ease-in-out;
+}
+
+.player:hover .info {
+    transform: translateY(0px);
+}
+
+.player:hover .img img {
+    transform: scale(1.1);
+}
+
+.info .progress {
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.info .progress #start,
+.info .progress #end {
+    margin: 0 12px;
+    user-select: none;
+}
+
+.info .progress #bar {
+    width: 300px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgb(222, 230, 238);
+}
+
+.info .song-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info .song-detail span {
+    margin: 4px 0;
+    height: 16px;
+    user-select: none;
+}
+
+.info .song-detail #title {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.info .song-detail #author {
+    letter-spacing: 1px;
+}
+
+.info .controls {
+    margin-top: 12px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info .controls .play {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info .controls .play span {
+    margin: 0 16px;
+    cursor: pointer;
+}
+
+.info .controls span {
+    user-select: none;
+}
+
+/* 隐藏audio */
+.audio {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
