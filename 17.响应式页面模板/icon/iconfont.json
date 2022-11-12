@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2529702",
+      "name": "目录、导航",
+      "font_class": "menu2",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "3376390",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "6289726",
+      "name": "个人",
+      "font_class": "geren1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "6582329",
+      "name": "目录",
+      "font_class": "mulu",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    }
+  ]
+}

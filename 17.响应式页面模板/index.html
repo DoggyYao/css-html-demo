@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icon/iconfont.css">
+    <title>响应式页面模板</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- 导航栏 -->
+        <section class="nav">
+            <!-- 正儿八经导航栏内容 -->
+            <div class="container">
+                <!-- 左侧 -->
+                <section class="nav-left">
+                    <span class="logo"></span>
+                    <span class="title">YaoDS Website</span>
+                </section>
+                <!-- 右侧 -->
+                <section class="nav-right">
+                    <ul class="first">
+                        <li>首页</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>个人中心</li>
+                    </ul>
+                </section>
+                <!-- 面包按钮 -->
+                <div id="bread" class="bread-btn">
+                    <span><i class="iconfont icon-menu2"></i></span>
+                </div>
+            </div>
+
+            <!-- 当屏幕宽度小于某个px时，所显示的下拉菜单 -->
+            <div id="drop" class="drop">
+                <ul class="drop-menu">
+                    <li>首页</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>个人中心</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 首页 -->
+        <section class="page home-page">
+            <span class="info">Hello Friends</span>
+            <span class="sub-info">“响应式Web设计”这个名字是Ethan Marcotte在2010年发明的。当时, 他在A List Apart上写了一篇文章, 这篇文章综合运用了三种已有技术 (弹性网格布局、弹性图片/媒体、媒体查询) 实现了一个解决方案, 就叫“响应式Web设计”。所谓响应式Web设计, 就是网页内容会随着访问它的视口及设备的不同而呈现不同的样式。</span>
+        </section>
+
+        <!-- 名言警句页 -->
+        <section class="page first-page">
+            <div class="title">
+                <span><i class="iconfont icon-geren1"></i></span>
+                well-known saying of a famous person
+            </div>
+            <div class="sentence-list">
+                <div class="item">
+                    <span class="author">Cicero</span>
+                    <span class="words">The best advice for young people is to make them modest and prudent, honor their parents, and love their relatives and friends.</span>
+                </div>
+                <div class="item">
+                    <span class="author">Montaigne</span>
+                    <span class="words">One must have three heads, a natural mind, a mind that comes from a book, and a mind that comes from life.</span>
+                </div>
+                <div class="item">
+                    <span class="author">Marx</span>
+                    <span class="words">Friendship is like the fog of the morning, the flattery is not friendship, the friendship can only be used to consolidate it. </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- yao叔追星页 -->
+        <section class="page second-page">
+            <div class="box">
+                <div class="img">
+                    <img src="./image/chetaixian.jpg" alt="">
+                </div>
+                <div class="comment">
+                    <span class="name">Che Tai Xian</span>
+                    <span class="job">Actor</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./image/luowenji.jpg" alt="">
+                </div>
+                <div class="comment">
+                    <span class="name">Luo Wen Ji</span>
+                    <span class="job">Actor</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./image/dingyiyu.jpg" alt="">
+                </div>
+                <div class="comment">
+                    <span class="name">Ding Yi Yu</span>
+                    <span class="job">Actor</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./image/Jisoo.jpg" alt="">
+                </div>
+                <div class="comment">
+                    <span class="name">Jisoo</span>
+                    <span class="job">Idol</span>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+</body>
+
+<script src="./script.js"></script>
+</html>
